@@ -6,7 +6,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class SistemaDeTrafico {
-    List<Vehiculo> vehiculos; // lista de vehículos en el sistema
+    private List<Vehiculo> vehiculos; // lista de vehículos en el sistema
     private List<Semaforo> semaforos; // lista de semáforos en el sistema
     private Random random; // generador de números aleatorios
 
@@ -51,7 +51,7 @@ public class SistemaDeTrafico {
                 int velocidad = vehiculo.getVelocidad();
                 Semaforo semaforo = getNearestSemaforo(vehiculo);
 
-                if (semaforo!= null &&!semaforo.esVerde()) {
+                if (semaforo != null && !semaforo.esVerde()) {
                     // si el semáforo está en rojo, reducir velocidad
                     velocidad -= 10;
                 }
